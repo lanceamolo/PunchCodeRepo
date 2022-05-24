@@ -49,31 +49,42 @@ public class Exercises {
         6. 3 owls were sitting on the fence. 2 more owls joined them. How many
         owls are on the fence now?
         */
-
+		int sittingOwls = 3;
+		int joiningOwls = 2;
+		int fenceOwls = sittingOwls + joiningOwls;
 
         /* Exercise 7
         7. 2 beavers were working on their home. 1 went for a swim. How many
         beavers are still working on their home?
         */
-
+		int workingBeavers = 2;
+		int swimmingBeavers = 1;
+		int stillWorkingBeavers = workingBeavers - swimmingBeavers;
 
         /* Exercise 8
         8. 2 toucans are sitting on a tree limb. 1 more toucan joins them. How
         many toucans in all?
         */
-
+		int toucansSitting = 2;
+		int toucansJoining = 1;
+		int totalToucans = toucansSitting + toucansJoining;
 
         /* Exercise 9
         9. There are 4 squirrels in a tree with 2 nuts. How many more squirrels
         are there than nuts?
         */
-
+		int totalSquirrels = 4;
+		int totalNuts = 2;
+		int squirrelToNutsDiff = totalSquirrels - totalNuts;
 
         /* Exercise 10
         10. Mrs. Hilt found a quarter, 1 dime, and 2 nickels. How much money did
         she find?
         */
-
+		double quarterTotal = 0.25;
+		double dimeTotal = 0.10;
+		double nickelsTotal = 0.10;
+		double moneyFound = quarterTotal + dimeTotal + nickelsTotal;
 
         /* Exercise 11
         11. Mrs. Hilt's favorite first grade classes are baking muffins. Mrs. Brier's
