@@ -217,32 +217,42 @@ public class Exercises {
         26. Mrs. Hilt bought 6 hot dogs. Each hot dog cost 50 cents. How much
         money did she pay for all of the hot dogs?
         */
-
+		double hotDogCount = 6;
+		double hotDogCost = .50;
+		double totalHotDogCost = hotDogCost * hotDogCount;
 
         /* Exercise 27
         27. Mrs. Hilt has 50 cents. A pencil costs 7 cents. How many pencils can
         she buy with the money she has?
         */
-
+		double pencilFund = .50;
+		double eachPencilCost = .07;
+		int pencilAmount = (int) (pencilFund / eachPencilCost);
 
         /* Exercise 28
         28. Mrs. Hilt saw 33 butterflies. Some of the butterflies were red and others
         were orange. If 20 of the butterflies were orange, how many of them
         were red?
         */
-
+		int allButterflies = 33;
+		int orangeButterflies = 20;
+		int redButterflies = allButterflies - orangeButterflies;
 
         /* Exercise 29
         29. Kate gave the clerk $1.00. Her candy cost 54 cents. How much change
         should Kate get back?
         */
-
+		double cashier = 1;
+		double candyPrice = .54;
+		double kateChange = cashier - candyPrice;
 
         /* Exercise 30
         30. Mark has 13 trees in his backyard. If he plants 12 more, how many trees
         will he have?
         */
-
+		int marksTrees = 13;
+		int plantedTress = 12;
+		int treesLeft = marksTrees - plantedTress;
 
         /* Exercise 31
         31. Joy will see her grandma in two days. How many hours until she sees
@@ -381,6 +391,11 @@ public class Exercises {
 	    Hint: Calculate the hourly rate for each painter, combine them, and then divide the total walls in feet by the combined hourly rate of the painters.
 	    */
 
+		double billsHourly = 1 / 2.15; // 0.46511627907
+		double jillsHourly = 1 / 1.9; // 0.52631578947
+		double combinedRate = billsHourly + jillsHourly;
+		double totalRooms = 5;
+		double question51Answer = totalRooms / combinedRate;
 
 	    /* Exercise 52
 	    52. Create and assign variables to hold a first name, last name, and middle initial. Using concatenation,
@@ -395,6 +410,7 @@ public class Exercises {
 	    53. The distance between New York and Chicago is 800 miles, and the train has already travelled 537 miles.
 	    What percentage of the trip as a whole number has been completed?
 	    */
+
 
 	}
 
