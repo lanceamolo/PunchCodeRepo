@@ -270,7 +270,25 @@ public class Exercises {
 	 squirrelPlay(95, false) → false
 	 squirrelPlay(95, true) → true
 	 */
+
+	// not summer
+	// Greater or equal to 60
+	// Less than or equal to 90
+
+	// || (or operator)
+
+	// summer
+	// Greater or equal to 60
+	// Less than or equal to 100
+	// return true
+
+	// else
+	// return false
+
 	public boolean squirrelPlay(int temp, boolean isSummer) {
+		if(temp >= 60 && temp <= 90 && !isSummer || temp >= 60 && temp <= 100 && isSummer){
+			return true;
+		}
 		return false;
 	}
 
@@ -294,8 +312,30 @@ public class Exercises {
      yourCakeAndEatItToo(10.00, true) → "special"
      yourCakeAndEatItToo(11.00, false) → "special"
      */
+
+	// no birthday (!isBirthday)
+	// standard: less than or equal to $10
+	// special: less than or equal to $15
+	// ginormous: greater than $15 ( mealAmount > 15 )( mealAmount >= 15.01 )
+
+	// add $5 if isBirthday = true
+
+	// birthday (isBirthday)
+	// standard: less than or equal to $5
+	// special: less than or equal to $10 && greater than or equal to $5.01
+	// ginormous: greater than $10.01 + 5 = 15.01
+
+
     public String yourCakeAndEatItToo(double mealAmount, boolean isBirthday) {
-        return "";
+        if(mealAmount <= 10 && !isBirthday || mealAmount <= 5 && isBirthday) {
+			return "standard";
+		} else if (mealAmount >= 5.01 && mealAmount <= 10 && isBirthday || mealAmount >= 10.01 && mealAmount <= 15 && !isBirthday){
+			return "special";
+		} else if (mealAmount >= 10.01 && isBirthday){
+			return "ginormous";
+		} else {
+			return "ginormous";
+		}
     }
 
 	/*
@@ -318,8 +358,27 @@ public class Exercises {
 	 alarmClock(5, false) → "7:00"
 	 alarmClock(0, false) → "10:00"
 	 */
+
+	// not on vacation
+	// weekdays 1 to 5 = "7:00"
+	// weekends 0 and 6 = "10:00"
+	//
+	// on vacation
+	// weekdays 1 to 5 = "10:00"
+	// weekends 0 and 6 = "off"
+
 	public String alarmClock(int day, boolean vacation) {
-		return "";
+		String results = "";
+		if(day >= 1 && day <= 5 && !vacation){
+			return results = "7:00";
+		}
+		if(day == 0 && !vacation|| day == 6 && !vacation || day >= 1 && day <= 5 && vacation){
+			return results = "10:00";
+		}
+		if(day == 0 && vacation || day == 6 && vacation){
+			return results = "off";
+		}
+		return results;
 	}
 
 	/*
