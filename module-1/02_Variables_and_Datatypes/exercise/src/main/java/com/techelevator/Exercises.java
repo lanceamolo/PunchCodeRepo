@@ -395,6 +395,9 @@ public class Exercises {
         them in an album. If an album can contain 20 pictures, how many
         albums will she need if there are 480 pictures?
         */
+		int picsPerAlbum = 20;
+		int picTotal = 480;
+		int albumsNeeded = picTotal / picsPerAlbum;
 
 
         /* Exercise 48
