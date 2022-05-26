@@ -298,25 +298,33 @@ public class Exercises {
         36. Arthur baked 35 muffins. How many more muffins does Arthur have to
         bake to have 83 muffins?
         */
-
+		int authursMuffins = 35;
+		int goalMuffins = 83;
+		int muffinsNeeded = goalMuffins - authursMuffins;
 
         /* Exercise 37
         37. Willy has 1400 crayons. Lucy has 290 crayons. How many more
         crayons does Willy have then Lucy?
         */
-
+		int willyCrayons = 1400;
+		int lucyCrayons = 290;
+		int crayonDiff = willyCrayons - lucyCrayons;
 
         /* Exercise 38
         38. There are 10 stickers on a page. If you have 22 pages of stickers, how
         many stickers do you have?
         */
-
+		int stickersOn = 10;
+		int pagesOfStickers = 22;
+		int stickerTotal = stickersOn * pagesOfStickers;
 
         /* Exercise 39
         39. There are 100 cupcakes for 8 children to share. How much will each
         person get if they share the cupcakes equally?
         */
-
+		double cupcakeTotal = 100;
+		double childCount = 8;
+		double cupcakePer = cupcakeTotal / childCount;
 
         /* Exercise 40
         40. She made 47 gingerbread cookies which she will distribute equally in
