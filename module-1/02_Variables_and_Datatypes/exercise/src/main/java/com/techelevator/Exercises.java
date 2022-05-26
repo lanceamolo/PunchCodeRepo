@@ -386,7 +386,9 @@ public class Exercises {
         them on the shelves in their bedroom. If every shelf can carry a
         maximum of 7 teddy bears, how many shelves will be filled?
         */
-
+		int gatheredTeddys = 98;
+		int teddyPerShelf = 7;
+		int shelvesFilled = gatheredTeddys / teddyPerShelf;
 
         /* Exercise 47
         47. Susie’s mother collected all family pictures and wanted to place all of
