@@ -340,35 +340,46 @@ public class Exercises {
         neighbors. If each neighbor received an equal number of croissants,
         how many will be left with Marian?
         */
-
+		int madeCroissants = 59;
+		int neighborCount = 8;
+		int givenCroissants = madeCroissants % neighborCount;
 
         /* Exercise 42
         42. Marian also baked oatmeal cookies for her classmates. If she can
         place 12 cookies on a tray at a time, how many trays will she need to
         prepare 276 oatmeal cookies at a time?
         */
-
+		int cookiesPerTray = 12;
+		int cookiesNeeded = 276;
+		int traysNeeded = cookiesNeeded / cookiesPerTray;
 
         /* Exercise 43
         43. Marian’s friends were coming over that afternoon so she made 480
         bite-sized pretzels. If one serving is equal to 12 pretzels, how many
         servings of bite-sized pretzels was Marian able to prepare?
         */
-
+		int pretzelCount = 480;
+		int perServing = 12;
+		int servingCount = pretzelCount / perServing;
 
         /* Exercise 44
         44. Lastly, she baked 53 lemon cupcakes for the children living in the city
         orphanage. If two lemon cupcakes were left at home, how many
         boxes with 3 lemon cupcakes each were given away?
         */
-
+		int cupcakesMade = 53;
+		int cupcakesHome = 2;
+		int cupPerBox = 3;
+		int boxesNeeded = (cupcakesMade - cupcakesHome) / cupPerBox;
 
         /* Exercise 45
         45. Susie's mom prepared 74 carrot sticks for breakfast. If the carrots
         were served equally to 12 people, how many carrot sticks were left
         uneaten?
         */
-
+		int prepCarrots = 74;
+		int servedCarrots = 12;
+		int leftOverCarrots = prepCarrots % servedCarrots;
 
         /* Exercise 46
         46. Susie and her sister gathered all 98 of their teddy bears and placed
