@@ -331,7 +331,9 @@ public class Exercises {
         tiny glass jars. If each jar is to contain six cookies, how many
         cookies will not be placed in a jar?
         */
-
+		int gingerBreadCookies = 47;
+		int jarCount = 6;
+		int sittingCookies = gingerBreadCookies % jarCount;
 
         /* Exercise 41
         41. She also prepared 59 croissants which she plans to give to her 8
