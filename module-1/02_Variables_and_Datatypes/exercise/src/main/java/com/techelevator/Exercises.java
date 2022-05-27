@@ -406,20 +406,27 @@ public class Exercises {
         cards, how many boxes were filled and how many cards are there in
         the unfilled box?
         */
-
+		int tradingCards = 94;
+		int boxSpace = 8;
+		int cardsInBox = tradingCards / boxSpace;
+		int unfilledBox = tradingCards % boxSpace;
 
         /* Exercise 49
         49. Susie’s father repaired the bookshelves in the reading room. If he has
         210 books to be distributed equally on the 10 shelves he repaired,
         how many books will each shelf contain?
         */
-
+		int susieBooks = 210;
+		int susieShelves = 10;
+		int bookCountPerShelf = susieBooks / susieShelves;
 
         /* Exercise 50
         50. Cristina baked 17 croissants. If she planned to serve this equally to
         her seven guests, how many will each have?
         */
-
+		double croissantCount = 17;
+		double guestCount = 7;
+		double evenCroissantPer = croissantCount / guestCount;
 
 	    /* Exercise 51
 	    51. Bill and Jill are house painters. Bill can paint a 12 x 14 room in 2.15 hours, while Jill averages

@@ -414,7 +414,10 @@ public class Exercises {
 	 specialEleven(24) → false
 	 */
 	public boolean specialEleven(int n) {
-		return false;
+		boolean multipleOfEleven = n % 11 == 0;
+		boolean multipleOfElevenPlusOne = n % 11 == 1;
+
+		return multipleOfEleven || multipleOfElevenPlusOne;
 	}
 
 	/*
