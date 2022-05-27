@@ -378,6 +378,7 @@ public class Exercises {
 		if(day == 0 && vacation || day == 6 && vacation){
 			return results = "off";
 		}
+
 		return results;
 	}
 
@@ -388,8 +389,20 @@ public class Exercises {
 	 in1To10(11, false) → false
 	 in1To10(11, true) → true
 	 */
+
+	// return true if
+	// n is greater or equal to 1 && n is less than or equal to 10 && outsideMode is false
+	// n is less than equal to 1 && outsideMode is true
+	// n is greater or equal to 10 && outsideMode is true
+	//
+	//else return false
+
 	public boolean in1To10(int n, boolean outsideMode) {
-		return false;
+		if(n >= 1 && n <= 10 && !outsideMode || n <= 1 && outsideMode|| n >= 10 && outsideMode){
+			return true;
+		} else {
+			return false;
+		}
 	}
 
 	/*
@@ -422,8 +435,15 @@ public class Exercises {
 	 old35(10) → true
 	 old35(15) → false
 	 */
+
+	// return true if
+	// not negative && multiple of 3 || not negative  && multiple of 5
+
 	public boolean old35(int n) {
-		return false;
+		boolean multiplesOfThree = n % 3 == 0;
+    	boolean multiplesOfFive = n % 5 == 0;
+
+		return multiplesOfThree ^ multiplesOfFive;
 	}
 
 	/*
@@ -434,8 +454,16 @@ public class Exercises {
 	 less20(19) → true
 	 less20(20) → false
 	 */
+
+	// return true
+	// ( n % 20 == 0 ) - 1 || ( n % 20 == 0 ) - 2
+
+
 	public boolean less20(int n) {
-		return false;
+		boolean eighteenMod = n % 20 == 18;
+		boolean ninteenMod = n % 20 == 19;
+
+		return eighteenMod || ninteenMod;
 	}
 
 	/*
@@ -485,7 +513,7 @@ public class Exercises {
 	}
 
 	/*
-	 31. Given three ints, a b c, return true if it is possible to add two of the ints to get the third.
+	 31. Given three ints, a b c, return true if it is possible to add or subtract two of the ints to get the third.
 	 twoAsOne(1, 2, 3) → true
 	 twoAsOne(3, 1, 2) → true
 	 twoAsOne(3, 2, 2) → false
