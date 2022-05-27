@@ -447,13 +447,20 @@ public class Exercises {
 		with a period. Use "Grace", "Hopper, and "B" for the first name, last name, and middle initial.
 		Example: "John", "Smith, "D" —> "Smith, John D."
 	    */
+		String firstName = "Grace";
+		String middleInit = "B";
+		String lastName = "Hopper";
 
+		String nameResults = lastName + ", " + firstName + " " + middleInit + ".";
 
 	    /* Exercise 53
 	    53. The distance between New York and Chicago is 800 miles, and the train has already travelled 537 miles.
 	    What percentage of the trip as a whole number has been completed?
 	    */
-
+		double nyToChi = 800;
+		double milesTraveled = 537;
+		double percentAsDouble = milesTraveled / nyToChi;
+		int percentAsWhole = (int) (percentAsDouble * 100);
 
 	}
 
