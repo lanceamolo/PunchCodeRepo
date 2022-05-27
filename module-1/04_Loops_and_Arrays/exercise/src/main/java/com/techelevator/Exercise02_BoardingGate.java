@@ -23,8 +23,14 @@ public class Exercise02_BoardingGate {
     generateSeatingChart(5) → [true, true, true, true, true]
     generateSeatingChart(2) → [true, true]
      */
+    // create a new array and fill that array with the boolean value true based off of numberOfSeats
     public boolean[] generateSeatingChart(int numberOfSeats) {
-        return new boolean[] {};
+        boolean[] openSeatCount = new boolean[numberOfSeats];
+
+        for(int i = 0; i < openSeatCount.length; i++){
+            openSeatCount[i] = true;
+        }
+        return  openSeatCount;
     }
 
     /*

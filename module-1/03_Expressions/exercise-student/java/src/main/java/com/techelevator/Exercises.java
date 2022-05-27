@@ -81,8 +81,13 @@ public class Exercises {
 	 parrotTrouble(true, 7) → false
 	 parrotTrouble(false, 6) → false
 	 */
+	// trouble is true if hour <= 7 || hour >= 20
 	public boolean parrotTrouble(boolean talking, int hour) {
-		return false;
+		if(talking && hour < 7 || talking && hour > 20){
+			return true;
+		} else {
+			return false;
+		}
 	}
 
 	/*
@@ -137,7 +142,10 @@ public class Exercises {
 	 or35(8) → false
 	 */
 	public boolean or35(int n) {
-		return false;
+		boolean multOfThree = n % 3 == 0;
+		boolean multOfFive = n % 5 == 0;
+
+		return multOfFive || multOfThree;
 	}
 
 	/*
@@ -146,8 +154,16 @@ public class Exercises {
 	 icyHot(-1, 120) → true
 	 icyHot(2, 120) → false
 	 */
+
+	// true
+	// temp1 is less && temp2 is more || temp1 is more && temp2 is less
+
 	public boolean icyHot(int temp1, int temp2) {
-		return false;
+		if(temp1 < 0 && temp2 > 100 || temp1 > 100 && temp2 < 0){
+			return true;
+		} else {
+			return false;
+		}
 	}
 
 	/*
@@ -157,7 +173,11 @@ public class Exercises {
 	 in1020(8, 99) → false
 	 */
 	public boolean in1020(int a, int b) {
-		return false;
+		if(a >= 10 && a <= 20 || b >= 10 && b <= 20){
+			return true;
+		} else {
+			return false;
+		}
 	}
 
 	/*
