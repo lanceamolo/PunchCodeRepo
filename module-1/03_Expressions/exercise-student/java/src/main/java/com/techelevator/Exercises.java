@@ -10,7 +10,7 @@ public class Exercises {
 	 sleepIn(false, true) → true
 	 */
 	public boolean sleepIn(boolean weekday, boolean vacation) {
-		if(weekday == true && vacation == false){
+		if (weekday == true && vacation == false) {
 			return false;
 		} else {
 			return true;
@@ -27,7 +27,7 @@ public class Exercises {
 	 monkeyTrouble(true, false) → false
 	 */
 	public boolean monkeyTrouble(boolean aSmile, boolean bSmile) {
-		if(aSmile == bSmile){
+		if (aSmile == bSmile) {
 			return true;
 		} else {
 			return false;
@@ -45,7 +45,7 @@ public class Exercises {
 		int firstNum = a;
 		int secondNum = b;
 
-		if(firstNum == secondNum){
+		if (firstNum == secondNum) {
 			return (firstNum + secondNum) * 2;
 		} else {
 			return firstNum + secondNum;
@@ -66,7 +66,7 @@ public class Exercises {
 	// if n is over 21 -> return n minus 21 * 2
 
 	public int diff21(int n) {
-		if(n <= 21){
+		if (n <= 21) {
 			return 21 - n;
 		} else {
 			return (n - 21) * 2;
@@ -83,7 +83,7 @@ public class Exercises {
 	 */
 	// trouble is true if hour <= 7 || hour >= 20
 	public boolean parrotTrouble(boolean talking, int hour) {
-		if(talking && hour < 7 || talking && hour > 20){
+		if (talking && hour < 7 || talking && hour > 20) {
 			return true;
 		} else {
 			return false;
@@ -101,7 +101,7 @@ public class Exercises {
 		int secondValue = b;
 		int combinedValue = firstValue + secondValue;
 
-		if(firstValue == 10 || secondValue == 10 || combinedValue == 10){
+		if (firstValue == 10 || secondValue == 10 || combinedValue == 10) {
 			return true;
 		} else {
 			return false;
@@ -126,7 +126,7 @@ public class Exercises {
 	// i need coffee
 
 	public boolean posNeg(int a, int b, boolean negative) {
-		if(a >= 1 && b <= -1 && !negative  ||  a <= -1 && b >= 1 && !negative  ||  a <= -1 && b <= -1 && negative){
+		if (a >= 1 && b <= -1 && !negative || a <= -1 && b >= 1 && !negative || a <= -1 && b <= -1 && negative) {
 			return true;
 		} else {
 			return false;
@@ -159,7 +159,7 @@ public class Exercises {
 	// temp1 is less && temp2 is more || temp1 is more && temp2 is less
 
 	public boolean icyHot(int temp1, int temp2) {
-		if(temp1 < 0 && temp2 > 100 || temp1 > 100 && temp2 < 0){
+		if (temp1 < 0 && temp2 > 100 || temp1 > 100 && temp2 < 0) {
 			return true;
 		} else {
 			return false;
@@ -173,7 +173,7 @@ public class Exercises {
 	 in1020(8, 99) → false
 	 */
 	public boolean in1020(int a, int b) {
-		if(a >= 10 && a <= 20 || b >= 10 && b <= 20){
+		if (a >= 10 && a <= 20 || b >= 10 && b <= 20) {
 			return true;
 		} else {
 			return false;
@@ -237,16 +237,16 @@ public class Exercises {
 //	a (50 - 29) = 19
 
 	public int max1020(int a, int b) {
-		if(b > a) {
+		if (b > a) {
 			a = a + b;
 			b = a - b;
 			a = a - b;
 		}
 
-		if(10 <= a && a <= 20){
+		if (10 <= a && a <= 20) {
 			return a;
 		}
-		if(10 <= b && b <= 20){
+		if (10 <= b && b <= 20) {
 			return b;
 		}
 
@@ -306,7 +306,7 @@ public class Exercises {
 	// return false
 
 	public boolean squirrelPlay(int temp, boolean isSummer) {
-		if(temp >= 60 && temp <= 90 && !isSummer || temp >= 60 && temp <= 100 && isSummer){
+		if (temp >= 60 && temp <= 90 && !isSummer || temp >= 60 && temp <= 100 && isSummer) {
 			return true;
 		}
 		return false;
@@ -346,17 +346,17 @@ public class Exercises {
 	// ginormous: greater than $10.01 + 5 = 15.01
 
 
-    public String yourCakeAndEatItToo(double mealAmount, boolean isBirthday) {
-        if(mealAmount <= 10 && !isBirthday || mealAmount <= 5 && isBirthday) {
+	public String yourCakeAndEatItToo(double mealAmount, boolean isBirthday) {
+		if (mealAmount <= 10 && !isBirthday || mealAmount <= 5 && isBirthday) {
 			return "standard";
-		} else if (mealAmount >= 5.01 && mealAmount <= 10 && isBirthday || mealAmount >= 10.01 && mealAmount <= 15 && !isBirthday){
+		} else if (mealAmount >= 5.01 && mealAmount <= 10 && isBirthday || mealAmount >= 10.01 && mealAmount <= 15 && !isBirthday) {
 			return "special";
-		} else if (mealAmount >= 10.01 && isBirthday){
+		} else if (mealAmount >= 10.01 && isBirthday) {
 			return "ginormous";
 		} else {
 			return "ginormous";
 		}
-    }
+	}
 
 	/*
 	 20. Given 2 ints, a and b, return their sum. However, sums in the range 10..19 inclusive, are forbidden,
@@ -389,13 +389,13 @@ public class Exercises {
 
 	public String alarmClock(int day, boolean vacation) {
 		String results = "";
-		if(day >= 1 && day <= 5 && !vacation){
+		if (day >= 1 && day <= 5 && !vacation) {
 			return results = "7:00";
 		}
-		if(day == 0 && !vacation|| day == 6 && !vacation || day >= 1 && day <= 5 && vacation){
+		if (day == 0 && !vacation || day == 6 && !vacation || day >= 1 && day <= 5 && vacation) {
 			return results = "10:00";
 		}
-		if(day == 0 && vacation || day == 6 && vacation){
+		if (day == 0 && vacation || day == 6 && vacation) {
 			return results = "off";
 		}
 
@@ -418,7 +418,7 @@ public class Exercises {
 	//else return false
 
 	public boolean in1To10(int n, boolean outsideMode) {
-		if(n >= 1 && n <= 10 && !outsideMode || n <= 1 && outsideMode|| n >= 10 && outsideMode){
+		if (n >= 1 && n <= 10 && !outsideMode || n <= 1 && outsideMode || n >= 10 && outsideMode) {
 			return true;
 		} else {
 			return false;
@@ -464,7 +464,7 @@ public class Exercises {
 
 	public boolean old35(int n) {
 		boolean multiplesOfThree = n % 3 == 0;
-    	boolean multiplesOfFive = n % 5 == 0;
+		boolean multiplesOfFive = n % 5 == 0;
 
 		return multiplesOfThree ^ multiplesOfFive;
 	}
@@ -589,8 +589,62 @@ public class Exercises {
 	 luckySum(13, 1, 3) → 3
 	 luckySum(13, 13, 3) → 0
 	 */
-	public int luckySum(int a, int b, int c) {
-		return 0;
-	}
 
+	// create sum variable
+	// if 'a' does NOT equal 13 && 'b' does NOT equal 13 && 'c' does NOT equal 13 then sum should be 'a+b+c'
+	// if 'a' does NOT equal 13 && 'b' does NOT equal 13 && 'c' does equal 13 then sum should be 'a+b'
+	// if 'a' does NOT equal 13 && 'b' and 'c' does equal 13 then sum should be 'a'
+	// if 'a' does NOT equal 13 && 'b' does equal 13 && 'c' does NOT equal 13 then sum should should be 'a'
+	// if 'a' does equal 13 && 'b' does NOT equal 13 && 'c' does NOT equal 13 then sum should be 'c'
+	// return sum
+
+	public int luckySum(int a, int b, int c) {
+		int sum = 0;
+
+		if (a != 13 && b != 13 && c != 13) {
+			return sum = sum + a + b + c;
+		}
+		if (a != 13 && b != 13 && c == 13) {
+			return sum = sum + a + b;
+		}
+		if (a != 13 && b == 13 && c == 13) {
+			return sum = sum + a;
+		}
+		if (a != 13 && b == 13 && c != 13){
+			return sum = sum + a;
+		}
+		// a is 13 && b is NOT 13 & c is NOT 13 = sum is C
+		if (a == 13 && b != 13 && c != 13) { //12
+			return sum = sum + c;
+		}
+
+		return sum;
+	}
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
