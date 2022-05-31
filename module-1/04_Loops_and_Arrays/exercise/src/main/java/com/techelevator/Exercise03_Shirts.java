@@ -39,15 +39,18 @@ public class Exercise03_Shirts {
     public char[] buildBulkOrder(int numberOfShirts) {
         char[] orderArray = new char[numberOfShirts];
 
-        for(int i = 0; i < orderArray.length; i++) {
+        for(int i = 0; i < numberOfShirts; i++) {
             int size = i % 3;
             if (size == 0) {
+                // this will feed the indexes of 0, 3, 6, 9 and so on
                 orderArray[i] = SMALL_TSHIRT;
             }
             else if (size == 1) {
+                // this will feed the indexes 1, 4, 7, 10 and so on
                 orderArray[i] = MEDIUM_TSHIRT;
             }
             else {
+                // this will feed the indexes 2, 5, 8, 11 and so on
                 orderArray[i] = LARGE_TSHIRT;
             }
         }
