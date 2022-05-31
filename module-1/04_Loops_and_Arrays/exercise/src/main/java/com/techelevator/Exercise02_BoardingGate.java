@@ -27,11 +27,19 @@ public class Exercise02_BoardingGate {
     public boolean[] generateSeatingChart(int numberOfSeats) {
         boolean[] openSeatCount = new boolean[numberOfSeats];
 
+
         for(int i = 0; i < openSeatCount.length; i++){
             openSeatCount[i] = true;
         }
         return  openSeatCount;
     }
+
+    // generateSeatingChart(7)
+    // openSeatCount = [empty, empty, empty, empty, empty, empty, empty]
+    // openSeatCount = [true, empty, empty, empty, empty, empty, empty]
+    // openSeatCount = [true, true, empty, empty, empty, empty, empty]
+    // ....
+    // openSeatCount = [true, true, true, true, true, true, true]
 
     /*
     Once passengers begin boarding the plane, gate attendants need a way to determine how many available
@@ -47,7 +55,15 @@ public class Exercise02_BoardingGate {
     getAvailableSeatCount([]) → 0
      */
     public int getAvailableSeatCount(boolean[] seatingChart) {
-        return 0;
+
+        int trueCount = 0;
+
+        for(int i = 0; i < seatingChart.length; i++){
+            if(seatingChart[i] == true){
+                trueCount++;
+            }
+        }
+        return trueCount;
     }
 
     /*
@@ -62,8 +78,34 @@ public class Exercise02_BoardingGate {
     getNumberOfFullRows([true, true, true, true, true, true]) → 2
     getNumberOfFullRows([false, true, true, false, true, true]) → 0
      */
+
+    // loop seatingChart array
+    // if index reads true, trueCounter++, else trueCounter = 0
+    // if trueCounter equals 3, threeInRow++ && trueCounter = 0
+    // return threeInRow
+
     public int getNumberOfFullRows(boolean[] seatingChart) {
-        return 0;
+        int fullRows = 0;
+        int streak = 0;
+
+        for (int i = 0; i < seatingChart.length; i++) {
+            if (i % 3 == 0) { //new row, start over
+                streak = 0;
+            }
+
+            if (seatingChart[i] == false) { //streak continues
+                streak++;
+            } else { //streak is over
+                streak = 0;
+            }
+
+            if (streak == 3) {
+                fullRows += 1;
+            }
+        }
+
+        return fullRows;
+
     }
 
 }

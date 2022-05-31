@@ -43,9 +43,7 @@ public class Exercise01_StoreOrders {
 	 createOrder() → [10, 40, 31, 41]
      */
     public int[] createOrder() {
-        return new int[] {
-                SMALL_CHEESE, CALZONE, LARGE_PEPPERONI, SPAGHETTI_PIE
-        };
+        return new int[] { SMALL_CHEESE, CALZONE, LARGE_PEPPERONI, SPAGHETTI_PIE };
     }
 
     /*
@@ -59,11 +57,31 @@ public class Exercise01_StoreOrders {
     getCalzoneSales([30, 31, 10]) → 0
     getCalzoneSales([]) → 0
      */
+
+    // orders = [40, 30, 31, 40, 10]
+    //
+    // orders[0] = 40
+    // orders[1] = 30
+    // orders[2] = 31
+    // orders[3] = 40
+    // orders[4] = 10
+
+    // i = 4
+    // i + 1
+
     public int getCalzoneSales(int[] orders) {
         int calzoneCount = 0;
+        //for(int i = 0; 0 < 5; i++)
+        //for(i = 1; 1 < 5; i++)
+        //for(i = 2; 2 < 5; i++)
+        //for(i = 3; 3 < 5; i++)
+        //for(i = 4; 4 < 5; i++)
+        //for(i = 5; 5 < 5;) loop ends here
+
+        // for loops only run if the middle part is true
 
         for(int i = 0; i < orders.length; i++){
-            if(orders[i] == CALZONE){
+            if(orders[i] == 40){
                 calzoneCount++;
             }
         }
@@ -84,7 +102,56 @@ public class Exercise01_StoreOrders {
     getCheesePizzaRevenue([10, 11, 20]) → 19
     getCheesePizzaRevenue([11, 21]) → 0
      */
+
+    // small cheese: 10, $8
+    // med cheese: 20, $11
+    // lg cheese: 30, $14
+
     public int getCheesePizzaRevenue(int[] orders) {
-        return 0;
+        int pizzaRevenue = 0; // adding the cost of each cheese pizza depending on size
+
+        for(int i = 0; i < orders.length; i++){
+            if(orders[i] == 10){
+                // add the cost of a small cheese pizza to pizzaRevenue
+                pizzaRevenue = pizzaRevenue + 8;
+            }
+            if(orders[i] == 20){
+                // add the cost of a med cheese pizza to pizzaRevenue
+                pizzaRevenue = pizzaRevenue + 11;
+            }
+            if(orders[i] == 30){
+                // add the cost of a lg cheese pizza to pizzaRevenue
+                pizzaRevenue += 14;
+            }
+        }
+        return pizzaRevenue;
     }
+
 }
+
+
+
+
+
+
+
+//        int cheesePizzaTotal = 0;
+//
+//        for(int i = 0; i < orders.length; i++){
+//
+//        if(orders[i] == 10){
+//        // add cost of small cheese pizza to total
+//        cheesePizzaTotal += 8;
+//        }
+//        if (orders[i] == 20){
+//        // add cost of med cheese pizza to total
+//        cheesePizzaTotal = cheesePizzaTotal + 11;
+//        }
+//        if (orders[i] == 30){
+//        // add cost of lg cheese pizza to total
+//        cheesePizzaTotal += 14;
+//        }
+//
+//        }
+//
+//        return cheesePizzaTotal;

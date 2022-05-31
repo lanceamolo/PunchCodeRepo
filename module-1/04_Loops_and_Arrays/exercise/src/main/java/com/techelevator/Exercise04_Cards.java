@@ -25,7 +25,7 @@ public class Exercise04_Cards {
     getFirstCard(["K-C", "Q-D", "J-H", "10-S", "Q-C"]) → "K-C"
     */
     public String getFirstCard(String[] hand) {
-        return "";
+        return hand[0];
     }
 
     /*
@@ -42,7 +42,9 @@ public class Exercise04_Cards {
     discardFirstCard(["K-C", "Q-D", "J-H", "10-S", "Q-C"]) → ["Q-D", "J-H", "10-S", "Q-C"]
      */
     public String[] discardFirstCard(String[] hand) {
-        return new String[] {};
+        String[] lastFour = { hand[1], hand[2], hand[3], hand[4] };
+
+        return lastFour;
     }
 
     /*
@@ -55,12 +57,25 @@ public class Exercise04_Cards {
     except when the deck has no cards. Then the array returned must be empty.
 
     Examples:
-    discardTopCard(["8-D", "10-H", "J-C", "8-D", "6-S", "Q-C", "2-D"]) → ["10-H", "J-C", "8-D", "6-S", "Q-C", "2-D"]
+    discardTopCard(["8-D", "10-H", "J-C", "8-D", "6-S", "Q-C", "2-D"]) → [null, "10-H", "J-C", "8-D", "6-S", "Q-C", "2-D"]
     discardTopCard(["4-D", "6-S", "K-D"]) → ["6-S", "K-D"]
     discardTopCard(["9-H"]) → []
     discardTopCard([]) → []
      */
     public String[] discardTopCard(String[] remainingDeck) {
-        return new String[] {};
-    }    
+        int newDeckSize = 0;
+
+        // this if statement feeds the size of newDeck array
+        if(remainingDeck.length > 0){
+            newDeckSize = remainingDeck.length -1;
+        }
+
+        String[] newDeck = new String[newDeckSize];
+
+        for(int i = 1; i < remainingDeck.length; i++){
+            newDeck[i - 1] = remainingDeck[i];
+        }
+        return newDeck;
+    }
+
 }
