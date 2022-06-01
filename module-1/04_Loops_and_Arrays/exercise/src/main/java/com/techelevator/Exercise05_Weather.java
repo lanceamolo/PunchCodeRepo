@@ -53,7 +53,7 @@ public class Exercise05_Weather {
         int hottestTemp = dailyHighs[0];
 
         for(int i = 0; i < dailyHighs.length; i++){
-            
+
             if(dailyHighs[i] > hottestTemp){
                 hottestTemp = dailyHighs[i];
             }
@@ -82,3 +82,41 @@ public class Exercise05_Weather {
         return temperatures;
     }
 }
+
+
+// INDEX;
+// [33, 30, 32, 37, 44, 31, 41]
+// [34, 31, 33, 38, 44, 31, 41]
+
+
+// for(int i = 0; i < temperature.length; i++)
+// { temperature[i] + 1 }
+
+
+
+// temperatures[0]
+// temperatures[1] skips
+// temperatures[2]
+// temperatures[3]
+// temperatures[4]
+// temperatures[5]
+// temperatures[6]
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

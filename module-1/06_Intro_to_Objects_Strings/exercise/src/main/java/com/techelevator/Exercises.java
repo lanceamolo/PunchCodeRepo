@@ -69,7 +69,13 @@ public class Exercises {
 	 firstTwo("ab") → "ab"
 	 */
 	public String firstTwo(String str) {
-		return null;
+		if(str.length() == 0){
+            return "";
+        } else if (str.length() < 2 && str.length() > 0){
+			return str;
+		} else {
+			return str.substring(0, 2);
+		}
 	}
 
 	/*
@@ -79,7 +85,10 @@ public class Exercises {
 	 firstHalf("abcdef") → "abc"
 	 */
 	public String firstHalf(String str) {
-		return null;
+		int length = str.length();
+		int halfWay = length / 2;
+
+		return str.substring(0, halfWay);
 	}
 
 	/*
@@ -90,7 +99,7 @@ public class Exercises {
 	 withoutEnd("coding") → "odin"
 	 */
 	public String withoutEnd(String str) {
-		return null;
+		return str.substring(1, str.length() - 1);
 	}
 
 	/*
@@ -102,7 +111,11 @@ public class Exercises {
 	 comboString("aaa", "b") → "baaab"
 	 */
 	public String comboString(String a, String b) {
-		return null;
+		if(a.length() > b.length()){
+			return b + a + b;
+		} else {
+			return a + b + a;
+		}
 	}
 
 	/*
@@ -113,7 +126,7 @@ public class Exercises {
 	 nonStart("shotl", "java") → "hotlava"
 	 */
 	public String nonStart(String a, String b) {
-		return null;
+		return a.substring(1) + b.substring(1);
 	}
 
 	/*
