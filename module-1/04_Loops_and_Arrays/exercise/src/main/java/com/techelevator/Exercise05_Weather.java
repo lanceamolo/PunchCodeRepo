@@ -53,6 +53,7 @@ public class Exercise05_Weather {
         int hottestTemp = dailyHighs[0];
 
         for(int i = 0; i < dailyHighs.length; i++){
+            
             if(dailyHighs[i] > hottestTemp){
                 hottestTemp = dailyHighs[i];
             }
