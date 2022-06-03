@@ -105,7 +105,34 @@ public class Exercises {
 	 interleaveLists( [1, 2, 3], [4, 5, 6] )  ->  [1, 4, 2, 5, 3, 6]
 	 */
 	public List<Integer> interleaveLists(List<Integer> listOne, List<Integer> listTwo) {
-		return null;
+		// make 2 (for loops)
+		// one for matching indexes and one for the list that has remaining values while the other one is complete
+
+		// variable for the first (for loop)'s maximum index
+		int smallerListLength = Math.min(listOne.size(), listTwo.size());
+		// create a new list of integers that we will return as our final result
+		List<Integer> resultsList = new ArrayList<>();
+
+		// this (for loop) will take the same index of both list given(listOne & listTwo) and feed them both
+		// into our new list that we created(resultsList)
+		for(int i = 0; i < smallerListLength; i++){
+			// each iteration send both[i] values into resultsList
+			resultsList.add(listOne.get(i));
+			resultsList.add(listTwo.get(i));
+		}
+
+		// variable for the second (for loop)'s maximum index and will be the list of the remaining values from the
+		// bigger list that we stopped on above.
+		List<Integer> biggerList = (listOne.size() > listTwo.size()) ? listOne : listTwo;
+		// this (for loop)'s index will start on the length of (smallerListLength)'s length
+		for(int i = smallerListLength; i < biggerList.size(); i++){
+			// this logic will continue on with the index that we stopped on in the previous (for loop) and add
+			// the rest of the values to the (resultsList) from the (biggerList)
+			resultsList.add(biggerList.get(i));
+		}
+
+		return resultsList;
+
 	}
 
 }
