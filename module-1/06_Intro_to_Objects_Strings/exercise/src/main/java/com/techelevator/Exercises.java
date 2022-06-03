@@ -137,7 +137,8 @@ public class Exercises {
 	 left2("Hi") → "Hi"
 	 */
 	public String left2(String str) {
-		return null;
+
+		return "";
 	}
 
 	/*
@@ -159,7 +160,15 @@ public class Exercises {
 	 theEnd("oh", true) → "o"
 	 */
 	public String theEnd(String str, boolean front) {
-		return null;
+		char results;
+
+		if(!front){
+			results = str.charAt(str.length() - 1);
+		} else {
+			results = str.charAt(0);
+		}
+
+		return Character.toString(results);
 	}
 
 	/*
@@ -170,7 +179,14 @@ public class Exercises {
 	 withoutEnd2("ab") → ""
 	 */
 	public String withoutEnd2(String str) {
-		return null;
+
+		if(str.length() <= 2){
+			return "";
+		} else {
+			String newStr = str.substring(1, str.length() - 1);
+			return newStr;
+		}
+
 	}
 
 	/*
@@ -181,7 +197,9 @@ public class Exercises {
 	 middleTwo("Practice") → "ct"
 	 */
 	public String middleTwo(String str) {
-		return null;
+		int halfWay = str.length() / 2; //code -> 2
+
+		return str.substring(halfWay - 1, halfWay + 1); // code str.substring(1,3)
 	}
 
 	/*
@@ -278,7 +296,16 @@ public class Exercises {
 	 doubleX("xxxxx") → true
 	 */
 	public boolean doubleX(String str) {
+		int firstX = str.indexOf('x');
+
+		if (firstX < str.length() - 1) {
+			if(str.charAt(firstX + 1) == 'x'){
+				return true;
+			}
+		}
+
 		return false;
+
 	}
 
 	/*
