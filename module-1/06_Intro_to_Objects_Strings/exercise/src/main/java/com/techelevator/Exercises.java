@@ -255,7 +255,10 @@ public class Exercises {
 	 hasBad("xxbadxx") → false
 	 */
 	public boolean hasBad(String str) {
-		return false;
+		// return true if 0 to 3 index || 1 to 4 index .equals("bad")
+		// return true if the string length is 3 and .equals("bad")
+		// return false if string length is less than or equals 2
+		// hint: .equals returns true or false
 	}
 
 	/*

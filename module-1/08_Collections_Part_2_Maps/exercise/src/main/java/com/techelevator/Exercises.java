@@ -1,6 +1,7 @@
 package com.techelevator;
 
 import java.util.HashMap;
+import java.util.Locale;
 import java.util.Map;
 
 public class Exercises {
@@ -34,7 +35,24 @@ public class Exercises {
 	 *
 	 */
 	public String animalGroupName(String animalName) {
-		return null;
+		Map<String, String> animals = new HashMap<String, String>();
+		animals.put("rhino", "Crash");
+		animals.put("giraffe", "Tower");
+		animals.put("elephant", "Herd");
+		animals.put("lion", "Pride");
+		animals.put("crow", "Murder");
+		animals.put("pigeon", "Kit");
+		animals.put("flamingo", "Pat");
+		animals.put("deer", "Herd");
+		animals.put("dog", "Pack");
+		animals.put("crocodile", "Float");
+
+		if (animalName != null && animals.containsKey(animalName.toLowerCase())) {
+			return animals.get(animalName.toLowerCase());
+		} else {
+			return "unknown";
+		}
+
 	}
 
 	/*
@@ -60,7 +78,18 @@ public class Exercises {
 	 *
 	 */
 	public double isItOnSale(String itemNumber) {
-		return -1.0;
+		Map<String, Double> sales = new HashMap<String, Double>();
+
+		sales.put("KITCHEN4001", 0.20);
+		sales.put("GARAGE1070", 0.15);
+		sales.put("LIVINGROOM", 0.10);
+		sales.put("KITCHEN6073", 0.40);
+		sales.put("BEDROOM3434", 0.60);
+		sales.put("BATH0073", 0.15);
+x
+		if(itemNumber != null && sales.containsKey(itemNumber.toUpperCase())){
+			return sales.get()
+		}
 	}
 
 	/*
