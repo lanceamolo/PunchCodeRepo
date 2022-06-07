@@ -150,7 +150,21 @@ public class Exercises {
 	HINT: To convert an Integer x to a String, you can use x.toString() in your code. For example, if x = 1, then x.toString() returns "1."
 	 */
 	public List<String> fizzBuzzList(Integer[] integerArray) {
-		return null;
+		List<String> fizzBuzz = new ArrayList<String>();
+
+		for(int i = 0; i < integerArray.length; i++){
+			if(integerArray[i] % 3 == 0 && integerArray[i] % 5 == 0){
+				fizzBuzz.add("FizzBuzz");
+			} else if (integerArray[i] % 3 == 0){
+				fizzBuzz.add("Fizz");
+			} else if (integerArray[i] % 5 == 0){
+				fizzBuzz.add("Buzz");
+			} else {
+				fizzBuzz.add(integerArray[i].toString());
+			}
+		}
+
+		return fizzBuzz;
 	}
 
 	/*
