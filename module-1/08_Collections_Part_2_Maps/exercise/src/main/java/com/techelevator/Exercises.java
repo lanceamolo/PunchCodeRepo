@@ -3,6 +3,7 @@ package com.techelevator;
 import java.util.HashMap;
 import java.util.Locale;
 import java.util.Map;
+import java.util.TreeMap;
 
 public class Exercises {
 
@@ -87,8 +88,11 @@ public class Exercises {
 		sales.put("BEDROOM3434", 0.60);
 		sales.put("BATH0073", 0.15);
 
+		// create (key) variable to check to see if parameter is null or not to allow toUpperCase to work
 		String key = itemNumber == null ? "" : itemNumber.toUpperCase();
+		// check to see if (key) variable is existing in Map
 		if (sales.containsKey(key)) {
+			// if it does, return the value with the matching key
 			return sales.get(key);
 		} else {
 			return 0.0;
@@ -106,8 +110,22 @@ public class Exercises {
 	 * robPeterToPayPaul({"Peter": 2000, "Paul": 30000}) → {"Peter": 2000, "Paul": 30000}
 	 *
 	 */
+
+	// if Peter's money > 0 && Paul's money < $10 return Peter gives half to Paul
+
 	public Map<String, Integer> robPeterToPayPaul(Map<String, Integer> peterPaul) {
-		return null;
+		int petersMoney = peterPaul.get("Peter");
+		int paulsMoney = peterPaul.get("Paul");
+
+		if(petersMoney > 0 && paulsMoney < 1000){
+			int moneyTransfer = petersMoney / 2;
+
+			peterPaul.put("Peter", petersMoney - moneyTransfer);
+			peterPaul.put("Paul", paulsMoney + moneyTransfer);
+		}
+
+		return peterPaul;
+
 	}
 
 	/*
@@ -119,8 +137,28 @@ public class Exercises {
 	 * peterPaulPartnership({"Peter": 3333, "Paul": 1234567890}) → {"Peter": 3333, "Paul": 1234567890}
 	 *
 	 */
+
+	// if petersMoney >= 5000 && paulsMoney >= 10000 then create new PPPartnership 25% of both
+
+
 	public Map<String, Integer> peterPaulPartnership(Map<String, Integer> peterPaul) {
-		return null;
+		int petersMoney = peterPaul.get("Peter");
+		int paulsMoney = peterPaul.get("Paul");
+
+		if(petersMoney >= 5000 && paulsMoney >= 10000){
+			int petersShare = petersMoney / 4;
+			int paulsShare = paulsMoney / 4;
+			int petersNew = petersMoney - petersShare;
+			int paulsNew = paulsMoney - paulsShare;
+
+			peterPaul.put("Peter", petersNew);
+			peterPaul.put("Paul", paulsNew);
+			peterPaul.put("PeterPaulPartnership", petersShare + paulsShare);
+
+		}
+
+		return peterPaul;
+
 	}
 
 	/*
@@ -132,7 +170,16 @@ public class Exercises {
 	 * beginningAndEnding(["muddy", "good", "moat", "good", "night"]) → {"g": "d", "m": "t", "n": "t"}
 	 */
 	public Map<String, String> beginningAndEnding(String[] words) {
-		return null;
+		Map<String, String> beginEnd = new TreeMap<String, String>();
+
+		for(String word : words){
+			String first = word.substring(0, 1);
+			String second = word.substring(word.length() - 1);
+
+			beginEnd.put(first, second);
+		}
+
+		return beginEnd;
 	}
 
 	/*
@@ -148,7 +195,27 @@ public class Exercises {
 	 *
 	 */
 	public Map<String, Integer> wordCount(String[] words) {
-		return null;
+		Map<String, Integer> wordCounter = new HashMap<String, Integer>();
+
+		// this condition will return a empty Map since our array is empty
+		if(words == null){
+			return wordCounter;
+		} else {
+			// set up loop to read over whole array. "word" will represent each index
+			for(String word : words){
+				// this condition will check to see if the "word" is already existing within (wordCounter) Map
+				if(wordCounter.containsKey(word)){
+					// if it DOES exist, add 1 to the value
+					wordCounter.put(word, wordCounter.get(word) + 1);
+				} else {
+					// if it DOES NOT exist, create a new key with "word" and start it with a value of 1
+					wordCounter.put(word, 1);
+				}
+			}
+
+			return wordCounter;
+		}
+
 	}
 
 	/*
@@ -163,7 +230,22 @@ public class Exercises {
 	 *
 	 */
 	public Map<Integer, Integer> integerCount(int[] ints) {
-		return null;
+		Map<Integer, Integer> intCounter = new HashMap<Integer, Integer>();
+
+		if(ints == null){
+			return intCounter;
+		} else {
+			for(Integer num : ints){
+				if(intCounter.containsKey(num)){
+					intCounter.put(num, intCounter.get(num) + 1);
+				} else {
+					intCounter.put(num, 1);
+				}
+			}
+
+			return intCounter;
+		}
+
 	}
 
 	/*
@@ -176,7 +258,17 @@ public class Exercises {
 	 *
 	 */
 	public Map<String, Boolean> wordMultiple(String[] words) {
-		return null;
+		Map<String, Boolean> multipleStr = new HashMap<String, Boolean>();
+
+		for(String word : words){
+			if(multipleStr.containsKey(word)){
+				multipleStr.put(word, true);
+			} else {
+				multipleStr.put(word, false);
+			}
+		}
+
+		return multipleStr;
 	}
 
 	/*
