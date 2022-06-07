@@ -86,8 +86,14 @@ public class Exercises {
 		sales.put("KITCHEN6073", 0.40);
 		sales.put("BEDROOM3434", 0.60);
 		sales.put("BATH0073", 0.15);
-x
-		return 
+
+		String key = itemNumber == null ? "" : itemNumber.toUpperCase();
+		if (sales.containsKey(key)) {
+			return sales.get(key);
+		} else {
+			return 0.0;
+		}
+
 	}
 
 	/*
