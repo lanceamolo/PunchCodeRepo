@@ -50,7 +50,14 @@ public class Exercises {
 	 */
 
 	public List<String> no4LetterWords(String[] stringArray) {
-		List<String> results = 
+		List<String> nonFourList = new ArrayList<String>();
+
+		for(int i = 0; i < stringArray.length; i++){
+			if(stringArray[i].length() != 4){
+				nonFourList.add(stringArray[i]);
+			}
+		}
+		return nonFourList;
 	}
 
 	/*
@@ -60,7 +67,7 @@ public class Exercises {
 	 arrayInt2ListDouble( {84, 99, 3285, 13, 877} ) -> [42, 49.5, 1642.5, 6.5, 438.5]
 	 */
 	public List<Double> arrayInt2ListDouble(int[] intArray) {
-
+		
 	}
 
 	/*
