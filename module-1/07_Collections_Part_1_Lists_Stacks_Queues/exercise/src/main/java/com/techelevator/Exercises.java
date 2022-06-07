@@ -67,7 +67,15 @@ public class Exercises {
 	 arrayInt2ListDouble( {84, 99, 3285, 13, 877} ) -> [42, 49.5, 1642.5, 6.5, 438.5]
 	 */
 	public List<Double> arrayInt2ListDouble(int[] intArray) {
-		
+		List<Double> doubleList = new ArrayList<Double>();
+
+		for(int i = 0; i < intArray.length; i++){
+			double newDouble = intArray[i];
+
+			doubleList.add(newDouble / 2);
+		}
+
+		return doubleList;
 	}
 
 	/*
@@ -94,7 +102,15 @@ public class Exercises {
 	 oddOnly( {734, 233, 782, 811, 3, 9999} ) -> [233, 811, 3, 9999]
 	 */
 	public List<Integer> oddOnly(Integer[] integerArray) {
-		return null;
+		List<Integer> oddValues = new ArrayList<Integer>();
+
+		for(int i = 0; i < integerArray.length; i++){
+			if(integerArray[i] % 2 == 1){
+				oddValues.add(integerArray[i]);
+			}
+		}
+
+		return oddValues;
 	}
 
 	/*
@@ -105,7 +121,20 @@ public class Exercises {
 	 foundIntTwice( [9, 9, 44, 2, 88, 9], 9) -> true
 	 */
 	public boolean foundIntTwice(List<Integer> integerList, int intToFind) {
-		return false;
+		int intToFindCounter = 0;
+
+		for(int i = 0; i < integerList.size(); i++){
+			if(intToFind == integerList.get(i)){
+				intToFindCounter++;
+			}
+		}
+
+		if(intToFindCounter >= 2){
+			return true;
+		} else {
+			return false;
+		}
+
 	}
 
 	/*
