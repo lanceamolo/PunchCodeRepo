@@ -269,6 +269,7 @@ public class Exercises {
 		}
 
 		return multipleStr;
+
 	}
 
 	/*
@@ -283,7 +284,12 @@ public class Exercises {
 	 */
 	public Map<String, Integer> consolidateInventory(Map<String, Integer> mainWarehouse,
 			Map<String, Integer> remoteWarehouse) {
-		return null;
+
+		Map<String, Integer> combineWarehouse = new HashMap<String, Integer>();
+
+		return combineWarehouse;
+
+
 	}
 
 	/*
@@ -301,8 +307,29 @@ public class Exercises {
 	 * last2Revisited(["hixxhi", "xaxxaxaxx", "axxxaaxx"]) → {"hixxhi": 1, "xaxxaxaxx": 1, "axxxaaxx": 2}
 	 *
 	 */
+
+
+
 	public Map<String, Integer> last2Revisited(String[] words) {
-		return null;
+		// create new map to return results
+		Map<String, Integer> results = new HashMap<String, Integer>();
+
+		for(String word : words){
+			// create count variable for the value of each string
+			int counter = 0;
+			// create variable to hold the last 2 chars of each string
+			String lastTwoChar = word.substring(word.length() - 2);
+
+			for(int i = 0; i < word.length() - 2; i++){
+				// if statement that adds 1 to (counter) variable if (lastTwoChar) variable shows up in each iteration of the for loop
+				// code goes here
+			}
+
+			results.put(word, counter);
+		}
+
+		return results;
+
 	}
 
 }
