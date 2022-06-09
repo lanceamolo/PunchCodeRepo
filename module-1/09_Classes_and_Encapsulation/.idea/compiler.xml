@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CompilerConfiguration">
+    <annotationProcessing>
+      <profile name="Maven default annotation processors profile" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <module name="classes-encapsulation-tutorial" />
+        <module name="m01d09-oop-with-encapsulation-exercise" />
+        <module name="classes-encapsulation-tutorial (1)" />
+      </profile>
+    </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="classes-encapsulation-tutorial" target="11" />
+      <module name="classes-encapsulation-tutorial (1)" target="11" />
+      <module name="m01d09-oop-with-encapsulation-exercise" target="11" />
+    </bytecodeTargetLevel>
+  </component>
+</project>

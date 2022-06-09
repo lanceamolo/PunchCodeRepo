@@ -48,6 +48,7 @@ public class Exercises {
 		animals.put("dog", "Pack");
 		animals.put("crocodile", "Float");
 
+
 		if (animalName != null && animals.containsKey(animalName.toLowerCase())) {
 			return animals.get(animalName.toLowerCase());
 		} else {
@@ -323,6 +324,9 @@ public class Exercises {
 			for(int i = 0; i < word.length() - 2; i++){
 				// if statement that adds 1 to (counter) variable if (lastTwoChar) variable shows up in each iteration of the for loop
 				// code goes here
+				if(word.substring(i, i + 2).equals(lastTwoChar)){
+					counter++;
+				}
 			}
 
 			results.put(word, counter);
