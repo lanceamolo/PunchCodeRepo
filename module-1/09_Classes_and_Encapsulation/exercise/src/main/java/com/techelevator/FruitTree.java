@@ -30,7 +30,6 @@ public class FruitTree {
         } else {
             return false;
         }
-        return true;
     }
 
 }
