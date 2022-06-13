@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/.idea/11_Inheritance.iml" filepath="$PROJECT_DIR$/.idea/11_Inheritance.iml" />
+      <module fileurl="file://$PROJECT_DIR$/exercise/inheritance-exercises.iml" filepath="$PROJECT_DIR$/exercise/inheritance-exercises.iml" />
+      <module fileurl="file://$PROJECT_DIR$/tutorial/inheritance-tutorial.iml" filepath="$PROJECT_DIR$/tutorial/inheritance-tutorial.iml" />
+      <module fileurl="file://$PROJECT_DIR$/tutorial-final/inheritance-tutorial-final.iml" filepath="$PROJECT_DIR$/tutorial-final/inheritance-tutorial-final.iml" />
+      <module fileurl="file://$PROJECT_DIR$/lecture/m01d11-inheritance-lecture.iml" filepath="$PROJECT_DIR$/lecture/m01d11-inheritance-lecture.iml" />
+      <module fileurl="file://$PROJECT_DIR$/lecture-final/m01d11-inheritance-part1-lecture-final.iml" filepath="$PROJECT_DIR$/lecture-final/m01d11-inheritance-part1-lecture-final.iml" />
+    </modules>
+  </component>
+</project>
