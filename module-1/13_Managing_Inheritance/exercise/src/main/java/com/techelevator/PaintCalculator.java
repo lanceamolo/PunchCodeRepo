@@ -13,7 +13,7 @@ class PaintCalculator {
     public static void main(String[] args) {
 
         // Step One:
-        //List<Wall> walls = new ArrayList<Wall>();
+        List<Wall> walls = new ArrayList<Wall>();
 
         while (true) {
             System.out.println("[1] Add a wall");

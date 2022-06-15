@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CompilerConfiguration">
+    <annotationProcessing>
+      <profile name="Maven default annotation processors profile" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <module name="managing-inheritance-tutorial" />
+        <module name="managing-inheritance-lecture" />
+        <module name="managing-inheritance-lecture-final" />
+        <module name="managing-inheritance-tutorial (1)" />
+        <module name="managing-inheritance-exercise" />
+      </profile>
+    </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="managing-inheritance-exercise" target="11" />
+      <module name="managing-inheritance-lecture" target="11" />
+      <module name="managing-inheritance-lecture-final" target="11" />
+      <module name="managing-inheritance-tutorial" target="11" />
+      <module name="managing-inheritance-tutorial (1)" target="11" />
+    </bytecodeTargetLevel>
+  </component>
+</project>
