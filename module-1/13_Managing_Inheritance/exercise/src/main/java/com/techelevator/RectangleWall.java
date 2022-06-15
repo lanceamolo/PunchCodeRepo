@@ -9,7 +9,6 @@ public class RectangleWall extends Wall{
         super(name, color);
         this.length = length;
         this.height = height;
-
     }
 
     public int getLength() {
