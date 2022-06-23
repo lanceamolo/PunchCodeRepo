@@ -1,12 +1,17 @@
 package com.techelevator;
 
-import java.awt.*;
 import java.io.File;
 import java.util.Scanner;
 import java.io.FileNotFoundException;
 import java.io.PrintWriter;
 
 public class FindAndReplace {
+
+    // search a word
+    // search a replacement word
+    // locate the source file
+    // locate the destination file
+    // copy and paste everything except the replacement word to the destination file
 
     public static void main(String[] args) {
 
@@ -41,6 +46,7 @@ public class FindAndReplace {
                 System.out.println(path + " does not exist!");
                 System.exit(0); // end program
             }
+            //
 
             // get the location of the destination file and save the path
             System.out.println("What is the destination file?");
@@ -66,14 +72,14 @@ public class FindAndReplace {
                     // take each "line" & replace old word with new word and print it on the destinationFile
                     destinationWriter.println(line.replaceAll(word, replaceWord));
                 }
+
+                
             }
 
             // catch with standard FileNotFound message
             catch (FileNotFoundException e) {
                 System.out.println(e.getMessage());
             }
-
-
 
         }
 
