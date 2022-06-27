@@ -73,7 +73,7 @@ public class FindAndReplace {
                     destinationWriter.println(line.replaceAll(word, replaceWord));
                 }
 
-                
+
             }
 
             // catch with standard FileNotFound message
