@@ -4,4 +4,4 @@
 -- select name & population from city table in the state of Ohio --
 SELECT city_name, population
 FROM city
-WHERE state_abbreviation = 'OH'
+WHERE state_abbreviation = 'OH';

@@ -2,4 +2,4 @@
 
 SELECT state_name, population, sales_tax
 FROM state
-WHERE census_region = 'West'
+WHERE census_region = 'West';

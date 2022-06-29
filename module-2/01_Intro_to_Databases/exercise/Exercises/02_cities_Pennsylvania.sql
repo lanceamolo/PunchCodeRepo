@@ -6,4 +6,4 @@
 
 SELECT city_name, area
 FROM city
-WHERE state_abbreviation = 'PA'
+WHERE state_abbreviation = 'PA';

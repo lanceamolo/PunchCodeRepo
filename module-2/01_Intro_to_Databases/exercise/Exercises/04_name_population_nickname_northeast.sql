@@ -4,4 +4,4 @@
 
 SELECT state_name, population, state_nickname
 FROM state
-WHERE census_region = 'Northeast'
+WHERE census_region = 'Northeast';
