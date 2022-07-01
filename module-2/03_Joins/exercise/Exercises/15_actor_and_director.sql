@@ -8,6 +8,3 @@ FROM movie m
 JOIN person p ON m.director_id = p.person_id
 JOIN movie_actor ma ON m.movie_id = ma.movie_id
 
--- Update the movie table
--- Set the collection_id to match the 'Bill Murray Collection' id
--- Where movie_id has Bill Murray as an actor
