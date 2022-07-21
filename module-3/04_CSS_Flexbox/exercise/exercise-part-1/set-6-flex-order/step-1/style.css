@@ -16,3 +16,11 @@ body {
   border-radius: 999px;
   margin: 0 10px;
 }
+
+.bio {
+  display: flex;
+}
+
+div:last-of-type img{
+  display: none;
+}
