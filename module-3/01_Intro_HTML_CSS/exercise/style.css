@@ -1,0 +1,46 @@
+body {
+    background-color: #141516;
+    color: white;
+}
+
+.center {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.underline {
+    text-decoration: underline;
+}
+
+#title {
+    text-align: center;
+    font-size: 60px;
+}
+
+#sashimi-bowl {
+    display: block;
+    width: 400px;
+    margin-left: auto;
+    margin-right: auto;
+    padding-bottom: 30px;
+    margin-top: -40px;
+}
+
+#fact-section {
+    margin-left: 15%;
+    margin-right: 15%;
+    padding: 10px;
+}
+
+#facts-img {
+    display: flex;
+}
+
+table {
+    width: 70%;
+}
+
+#chef-1 {
+    width: 30vw;
+}
+
